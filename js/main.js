@@ -48,11 +48,41 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (menuToggle && navMenu) {
-  menuToggle.addEventListener("click", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if (!menuToggle || !navMenu) return;
+
+  /* Toggle menu */
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
     navMenu.classList.toggle("active");
   });
-}
+
+  /* Close menu when clicking a link */
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+
+  /* Click outside to close */
+  document.addEventListener("click", (e) => {
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      navMenu.classList.remove("active");
+    }
+  });
+
+  /* Active link highlight */
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navMenu.querySelectorAll("a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active-link");
+    }
+  });
+
+});
+
