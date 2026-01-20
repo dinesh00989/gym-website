@@ -200,13 +200,109 @@ body {
   color: #666;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE FIX PATCH ================= */
 @media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    padding: 70px 16px 60px;
+  }
+
   .hero h1 {
-    font-size: 34px;
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 70px 16px;
   }
 
   .section h2 {
-    font-size: 30px;
+    font-size: 26px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+
+  /* GRID */
+  .grid {
+    margin-top: 40px;
+    gap: 24px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 80px 16px;
+  }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .cta p {
+    font-size: 16px;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .navbar nav {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* BUTTON */
+  .btn {
+    padding: 14px 32px;
+    font-size: 15px;
   }
 }
+/* ================= MOBILE NAVBAR ================= */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #121212;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+
+  .navbar nav a {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+}
+
