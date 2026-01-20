@@ -1,15 +1,17 @@
 const gymConfig = {
-  name: "AH Fitness",
-  city: "Addanki",
+  name: "BEYOND GYM",
+  city: "Ongole",
 
   // Phone number for tel: links (WITH +)
-  phone: "+919515533082",
+  phone: "+917032774333",
 
   // WhatsApp number for wa.me links (NO +, country code included)
-  whatsapp: "919515533082",
+  whatsapp: "917032774333",
 
-  addressText: "AH Fitness, Addanki, Andhra Pradesh",
-  mapLink: "https://maps.app.goo.gl/WeCcJnGzq3Exxneg6",
+  addressText: "BEYOND GYM, Ongole, Andhra Pradesh",
+  mapLink: "https://maps.app.goo.gl/RL5anY51diy772Dr7",
 
   tagline: "Train with discipline. Build strength. Transform your life."
 };
+
+
